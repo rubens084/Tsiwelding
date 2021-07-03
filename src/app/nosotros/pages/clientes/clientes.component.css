@@ -1,0 +1,47 @@
+.carrusell-top {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+row {
+    width: 100%;
+}
+
+.flex-item {
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    line-height: 150px;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.center-text {
+    margin-left: 70px;
+}
+
+.center-recuadro {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
