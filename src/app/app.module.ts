@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import {VentanasComponent} from './productos/pages/ventanas/ventanas.component'
 
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,7 +37,9 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     MatIconModule,
     MatListModule,
     FlexLayoutModule,
-    MatCarouselModule.forRoot()
+    MatCarouselModule.forRoot(),
+    ReactiveFormsModule
+
 
 
 

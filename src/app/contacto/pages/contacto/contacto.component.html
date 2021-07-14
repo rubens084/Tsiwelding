@@ -1,33 +1,70 @@
-<!-- contenedores X2 -->
+<div fxLayout="row" xLayoutAlign="space-evenly center" fxLayoutGap="40px " class="M-prinsipal">
+    <!-- Recuadro correo -->
+    <div class="recuadro-correo example-form ">
 
-<div fxLayout="row" style="max-width:fit-content" fxLayoutAlign="space-evenly center" class="center-recuadro recuadro-top">
-
-    <div fxLayoutGap="20px" align-self="center">
-
-
-
-        <div>
-
-            <h5>Empresa dedicada a la fabricación de muebles de acero inoxidable para hogar , negocio e industrial, Cómo mesas de trabajo , repisas , equipo de restaurante , fabricación sobre diseño para industria maquiladora
-                <b>Calle torreón 306 otay magisterial CP. 22470 Tijuana baja California</b></h5>
+        <div class="barra-sup-correo">
+            <h2 class="h2">Contacta con nosotros! </h2>
 
         </div>
+        <form [formGroup]="formulario" (ngSubmit)="enviar()">
+            <!-- Nombre -->
+            <div class="example-form M-secundario">
+                <mat-form-field fxFlex="40" class="example-full-width" appearance="fill">
+                    <mat-label>Nombre</mat-label>
+                    <input formControlName="nombre" class="color-letra-inputs" type="text" matInput placeholder="Ej. Ruben Dorado">
+                    <mat-hint>Ingresa tu Nombre!</mat-hint>
+                </mat-form-field>
+
+                <!-- Correo -->
+                <div class="example-form Pos-correo">
+                    <mat-form-field fxFlex="80" class="example-full-width" appearance="fill">
+                        <mat-label>Email @</mat-label>
+                        <input formControlName="correo" class="color-letra-inputs" type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Ej. Rub@Ejemplo.com">
+                        <mat-hint>Ingresa tu correo !</mat-hint>
 
 
+
+                        <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Favor de ingresar un correo valido
+                        </mat-error> -->
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <!-- cell -->
+            <div class="example-form M-secundario ">
+                <mat-form-field fxFlex="70" class="example-full-width" appearance="fill">
+                    <mat-label>Telefono #</mat-label>
+                    <span matPrefix>+1 &nbsp;</span>
+                    <input formControlName="cell" class="color-letra-inputs" type="tel" matInput placeholder="555-555-1234">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="example-form M-secundario">
+
+                <mat-form-field fxFlex="80" class="example-full-width" appearance="fill">
+                    <mat-label>Escrivenos tu mensaje !</mat-label>
+                    <textarea formControlName="mensaje" class="color-letra-inputs" matInput placeholder="Resuelve tus dudas"></textarea>
+                </mat-form-field>
+            </div>
+
+            <!-- Boton Enviar-->
+            <section>
+                <div class="example-button-row ">
+                    <button class="boton-enviar" type="submit" mat-button>Enviar</button>
+                </div>
+            </section>
+        </form>
+    </div>
+
+
+    <!-- GPS -->
+    <div fxFlex="40">
+        <iframe class="mapa-borde" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3363.2426836276572!2d-116.9024795854884!3d32.54636780301848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d94737b99d4bcb%3A0x3071ba21a653a621!2sTorre%C3%B3n%20306%2C%20Magisterial%2C%2022470%20Tijuana%2C%20B.C.!5e0!3m2!1ses-419!2smx!4v1625525355699!5m2!1ses-419!2smx"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
     </div>
-    <!--  -->
-    <div fxLayoutGap="20px " fxFlex="100" align-self="center ">
-
-
-
-        <img fxFlex="100 " style="height: 500px; width: 650px ; " [src]="url " class="center-img " alt="imagen-1 " width="800 " height="950 ">
-
-
-
-    </div>
-
-
-
 
 </div>
